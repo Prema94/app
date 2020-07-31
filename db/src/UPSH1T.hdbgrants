@@ -1,0 +1,20 @@
+{
+  "UPSH1T": {
+    "object_owner" : {
+      "schema_privileges":[
+        {
+          "reference":"556327",
+          "privileges_with_grant_option":["SELECT","INSERT","UPDATE","DELETE"]
+        }
+      ]
+    },
+    "application_user" : {
+      "schema_privileges":[
+        {
+          "reference":"556327",
+          "privileges_with_grant_option":["SELECT","INSERT","UPDATE","DELETE"]
+        }
+      ]
+    }
+  }
+}

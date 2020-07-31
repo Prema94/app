@@ -1,0 +1,14 @@
+{
+  "app.db::EKKO": {
+    "target": {
+      "object": "EKKO",
+      "schema": "556327"
+    }
+  },
+  "app.db::EKKO_SS": {
+    "target": {
+      "object": "EKKO_SS",
+      "schema": "556327"
+    }
+  }
+}
