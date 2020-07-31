@@ -1,4 +1,4 @@
-ID: app
+ID: Demoapp
 _schema-version: '2.1'
 version: 0.0.1
 
@@ -22,6 +22,46 @@ modules:
                           
 
 
+
+    - name: cross-container-service-2
+      group: SERVICE_REPLACEMENTS
+
+      properties:
+        key: ServiceName_2
+        service: ~{the-service-name}
+                          
+
+
+
+ 
+    - name: cross-container-service-4
+      group: SERVICE_REPLACEMENTS
+
+      properties:
+        key: ServiceName_3
+        service: ~{the-service-name}
+                          
+
+
+ - name: Demo2
+   type: hdb
+   path: Demo2
+   requires:
+    - name: hdi_Demo2
+      properties:
+        TARGET_CONTAINER: ~{hdi-container-name_2}
+
+
+
+    - name: cross-container-service-3
+      group: SERVICE_REPLACEMENTS
+
+      properties:
+        key: ServiceName_1
+        service: ~{the-service-name}
+                          
+
+
 resources:
  - name: hdi_db
    properties:
@@ -30,11 +70,38 @@ resources:
 
  - name: cross-container-service-1
    parameters:
+      service-name: UPSHD1PROD
+   properties:
+      the-service-name: ${service-name}
+   type: org.cloudfoundry.existing-service
+
+
+ - name: cross-container-service-2
+   parameters:
       service-name: UPSH1T
    properties:
       the-service-name: ${service-name}
    type: org.cloudfoundry.existing-service
 
 
+ - name: hdi_Demo2
+   properties:
+      hdi-container-name_2: ${service-name}
+   type: com.sap.xs.hdi-container
 
+
+ - name: cross-container-service-3
+   parameters:
+      service-name: UPSHD12
+   properties:
+      the-service-name: ${service-name}
+   type: org.cloudfoundry.existing-service
+
+
+ - name: cross-container-service-4
+   parameters:
+      service-name: UPSH1T
+   properties:
+      the-service-name: ${service-name}
+   type: org.cloudfoundry.existing-service
 

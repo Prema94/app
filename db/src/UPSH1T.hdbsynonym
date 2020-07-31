@@ -1,14 +1,20 @@
 {
-  "app.db::EKKO": {
+  "EKKO": {
     "target": {
       "object": "EKKO",
       "schema": "556327"
     }
   },
-  "app.db::EKKO_SS": {
+  "HD1_EKKO": {
     "target": {
-      "object": "EKKO_SS",
+      "object": "EKKO",
+      "schema": "556327"
+    }
+  },
+  "S_EKKO": {
+    "target": {
+      "object": "EKKO",
       "schema": "556327"
     }
   }
-}
+}   
